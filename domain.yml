@@ -5,29 +5,39 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - feeling_lonely
+  - stressed_about_studies
+  - anxious_socially
+  - need_support
+  - thankyou
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+    - text: "Hello! I'm here to listen. How are you feeling today?"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Take care. I'm always here if you need to talk."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_affirm:
+    - text: "Great! Let's talk more."
+
+  utter_deny:
+    - text: "That's okay. Feel free to share when you're ready."
+
+  utter_feeling_lonely:
+    - text: "I'm really sorry you're feeling lonely. You're not alone in this. Want to talk more about it?"
+
+  utter_stressed_about_studies:
+    - text: "Exams and studies can be really stressful. Taking breaks and talking can help. Want some tips?"
+
+  utter_anxious_socially:
+    - text: "Social anxiety is tough. You're doing well by opening up about it."
+
+  utter_need_support:
+    - text: "Of course. I'm here for you. Do you want to share what's bothering you?"
+
+  utter_thankyou:
+    - text: "You're most welcome! Stay strong 💪"
 
 session_config:
   session_expiration_time: 60

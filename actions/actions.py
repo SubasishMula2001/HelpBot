@@ -25,3 +25,13 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+from rasa_sdk import Action
+from rasa_sdk.events import SlotSet
+
+class ActionGreetUser(Action):
+    def name(self):
+        return "action_greet_user"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message(text="Hello, how can I help you?")
+        return []

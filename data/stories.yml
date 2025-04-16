@@ -1,30 +1,33 @@
 version: "3.1"
-
 stories:
-
-- story: happy path
+- story: support loneliness
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+    - intent: feeling_lonely
+    - action: utter_feeling_lonely
 
-- story: sad path 1
+- story: support stress
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+    - intent: stressed_about_studies
+    - action: utter_stressed_about_studies
 
-- story: sad path 2
+- story: support anxiety
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - intent: anxious_socially
+    - action: utter_anxious_socially
+
+- story: support general help
+  steps:
+    - intent: need_support
+    - action: utter_need_support
+
+- story: greeting and thanks
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: thankyou
+    - action: utter_thankyou
+
+- story: farewell
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
