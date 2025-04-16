@@ -14,12 +14,6 @@ This project is a web-based **mental health support chatbot** built using **Rasa
 
 ---
 
-## 📁 Project Structure
-
-mental-health-chatbot/ │ ├── actions/ # Custom Python actions (if any) ├── data/ # NLU and story training data ├── models/ # Trained models (excluded in .gitignore) ├── frontend/ # HTML/CSS/JS web UI for chatbot ├── config.yml # NLU pipeline and policies ├── domain.yml # Intents, responses, entities, slots ├── credentials.yml # Chat channels config (e.g. REST, Telegram) ├── endpoints.yml # Action and Tracker endpoints ├── requirements.txt # Python dependencies ├── .gitignore # Ignore unnecessary files in Git └── README.md # You're here!
-
----
-
 ## 💬 Example Questions You Can Ask the Bot
 
 - "I feel very lonely at night."
