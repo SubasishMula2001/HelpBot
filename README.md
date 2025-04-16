@@ -35,5 +35,5 @@ mental-health-chatbot/ │ ├── actions/ # Custom Python actions (if any) �
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/mental-health-chatbot.git
+git clone https://github.com/SubasishMula2001/mental-health-chatbot.git
 cd mental-health-chatbot
