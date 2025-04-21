@@ -1,0 +1,37 @@
+version: "3.1"
+rules:
+
+- rule: greet user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: goodbye user
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: homesick help
+  steps:
+    - intent: homesickness
+    - action: utter_homesickness
+
+- rule: exam stress support
+  steps:
+    - intent: exam_stress
+    - action: utter_exam_stress
+
+- rule: food feedback
+  steps:
+    - intent: food_issues
+    - action: utter_food_issues
+
+- rule: sleep advice
+  steps:
+    - intent: sleep_problems
+    - action: utter_sleep_problems
+
+- rule: loneliness support
+  steps:
+    - intent: loneliness
+    - action: utter_loneliness

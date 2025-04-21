@@ -1,0 +1,34 @@
+version: "3.1"
+stories:
+
+- story: greet and goodbye
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: support homesickness
+  steps:
+    - intent: homesickness
+    - action: utter_homesickness
+
+- story: support exam stress
+  steps:
+    - intent: exam_stress
+    - action: utter_exam_stress
+
+- story: food complaint
+  steps:
+    - intent: food_issues
+    - action: utter_food_issues
+
+- story: sleep problem
+  steps:
+    - intent: sleep_problems
+    - action: utter_sleep_problems
+
+- story: handle loneliness
+  steps:
+    - intent: loneliness
+    - action: utter_loneliness

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subasish's Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <span>🤖 Subasish's Chatbot</span>
+    </div>
+    <div class="chat-body" id="chat">
+      <!-- Messages will appear here -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" />
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById("user-input");
+      const message = input.value.trim();
+      if (!message) return;
+
+      appendMessage("👨‍💼You", message, "user");
+      input.value = "";
+
+      try {
+        const response = await fetch("http://localhost:5005/webhooks/rest/webhook", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sender: "user", message: message }),
+        });
+
+        const data = await response.json();
+        if (data.length === 0) {
+          appendMessage("Bot", "I'm not sure how to respond to that.", "bot");
+        } else {
+          data.forEach((msg, i) => {
+            setTimeout(() => {
+              appendMessage("🤖Bot", msg.text, "bot");
+            }, 300 * i);
+          });
+        }
+      } catch (error) {
+        appendMessage("🤖Bot", "Server error. Please make sure Rasa is running.", "bot");
+      }
+    }
+
+    function appendMessage(sender, text, type) {
+      const chat = document.getElementById("chat");
+      const messageEl = document.createElement("div");
+      messageEl.className = `chat-message ${type}`;
+      messageEl.innerHTML = `<strong>${sender}:</strong> <span class="bubble">${text}</span>`;
+      chat.appendChild(messageEl);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    document.getElementById("user-input").addEventListener("keypress", function (e) {
+      if (e.key === "Enter") sendMessage();
+    });
+  </script>
+
+</body>
+</html>

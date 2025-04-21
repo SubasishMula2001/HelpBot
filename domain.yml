@@ -1,0 +1,36 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - homesickness
+  - exam_stress
+  - food_issues
+  - sleep_problems
+  - loneliness
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you feeling today?"
+
+  utter_goodbye:
+    - text: "Take care. I'm always here if you need someone to talk to."
+
+  utter_homesickness:
+    - text: "Missing home is natural. Maybe call a loved one or watch something comforting. You're not alone here."
+
+  utter_exam_stress:
+    - text: "Exams can be stressful, but remember to take breaks, breathe deeply, and focus on one step at a time."
+
+  utter_food_issues:
+    - text: "Sorry to hear that. Have you tried giving feedback to the mess committee? You deserve good meals."
+
+  utter_sleep_problems:
+    - text: "Sleep is essential. Try avoiding screens before bed, and maybe relax with light music or a book."
+
+  utter_loneliness:
+    - text: "I'm here for you. Feeling lonely is okay. Try calling a friend or joining a common room activity."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

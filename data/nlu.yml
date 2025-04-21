@@ -1,0 +1,52 @@
+version: "3.1"
+nlu:
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - take care
+
+- intent: homesickness
+  examples: |
+    - I miss my home
+    - I'm feeling homesick
+    - I want to go home
+    - I miss my parents
+
+- intent: exam_stress
+  examples: |
+    - I'm stressed about exams
+    - exam stress is killing me
+    - I have too much pressure during exams
+    - how to deal with exam stress?
+
+- intent: food_issues
+  examples: |
+    - the food in the mess is bad
+    - I'm not happy with the food
+    - the mess food is tasteless
+    - food quality is poor
+
+- intent: sleep_problems
+  examples: |
+    - I can't sleep at night
+    - I have insomnia
+    - My sleep schedule is ruined
+    - I feel sleepy all the time
+
+- intent: loneliness
+  examples: |
+    - I feel lonely
+    - I'm alone here
+    - I have no one to talk to
+    - I'm feeling isolated
